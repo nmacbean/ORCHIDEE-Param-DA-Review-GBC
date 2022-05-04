@@ -1,2 +1,1 @@
-This folder contains the script needed to produce Figure 2. The simulations can
-be found in Zenodo repository: 
+This folder contains the script and netcdf file needed to produce Figure 2. 
