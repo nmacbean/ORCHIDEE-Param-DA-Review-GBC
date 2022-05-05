@@ -1,5 +1,13 @@
 #!/usr/local/install/python-2.7.5/bin/ipython
 
+"""
+Script for plotting mean annual GPP posterior and difference global maps from MacBean et al. (2018) and Bacour et al. (2019) SIF optimization papers.
+"""
+__author__ = "Natasha MacBean"
+__version__ = "1.0 (07.22.2021)"
+__email__ = "nlmacbean@gmail.com"
+
+
 import numpy as np
 import netCDF4 as nc
 import matplotlib.pyplot as plt
