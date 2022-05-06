@@ -9,4 +9,5 @@ summarized results from multiple papers into new synthesis figures (Figs. 2 to
 documented in this repository. Figure 6 is unpublished work; therefore, we also
 document the simulations, observations, and scripts used to produce this figure.
 
- 
+Please see the ORCHIDEE DA System (ORCHIDAS) website for further details on our
+assimilation system, publications, and ongoing research: https://orchidas.lsce.ipsl.fr 
