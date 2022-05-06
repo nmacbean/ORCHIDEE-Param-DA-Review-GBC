@@ -4,7 +4,7 @@
 
 __author__ = "Cedric Bacour"
 __version__ = "1.0 (07.08.2021)"
-__email__ = "cedric.bacour@lsce.ipsl.fr""
+__email__ = "cedric.bacour@lsce.ipsl.fr"
 
 
 import os,sys
@@ -30,16 +30,12 @@ plt.ion()
 path_out = './'
 if not os.path.isdir(path_out): os.mkdir(path_out)
 
-cols = set_colors.colors['colorblind12']
 colors = {}
-colors['F+S+CO2'] = cols[7]
-colors['F'] = cols[2]
-colors['S'] = cols[5]
 ccols1 = set_colors.colors['tableau20']
 colors['stepwise'] = ccols1[-1]
 colors['F+S+CO2'] = 'C0' 
-colors['F'] = 'C2'
-colors['S'] = 'C1'
+colors['F'] = 'C1'
+colors['S'] = 'C2'
 colors['stepwise'] = 'C3'
 
 
@@ -55,6 +51,7 @@ res = cPickle.load(file(filein,'r'))
 #
 # - Trends par regions
 # - 
+###regions = ['nhemisphere','tropics']
 regs_names_sorted = ['nhemisphere','tropics']
 annees = np.arange(10)+2000
 ifig = 1
@@ -95,8 +92,16 @@ for (ireg,reg) in enumerate(regs_names_sorted):
             style = '-'
             if "resOpti" in cas: style = "--"
             col_cas = cas
+            if cas == 'F+S+CO2':
+                label_cas = 'simultaneous'
+            elif cas == 'F':
+                label_cas = 'FLUXNET NEE'
+            elif cas == 'S':
+                label_cas = 'MODIS NDVI'
+            else:
+                label_cas = cas
             if "PRIORSPIN_KSOILC" in col_cas: col_cas = col_cas.replace("_PRIORSPIN_KSOILC","")
-            ax.plot(annees, res['post'][var][cas]['yearly_budgets'][reg],style,color=colors[col_cas],label=cas)
+            ax.plot(annees, res['post'][var][cas]['yearly_budgets'][reg],style,color=colors[col_cas],label=label_cas)
         if 'NEE' in var: ax.plot([annees[0], annees[-1]],[0,0],'--k')
 
 
