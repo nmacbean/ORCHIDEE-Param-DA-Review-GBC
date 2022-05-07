@@ -1,5 +1,7 @@
 """
-Script for plotting NBP barplots from stepwise and simultaneous optimizations with NEE, NDVI and atmospheric CO2 data cf CAMS inversion and GCB for GBC ORCH DA review paper
+Script for plotting NBP barplots from stepwise and simultaneous optimizations 
+with NEE, NDVI and atmospheric CO2 data cf CAMS inversion and GCB 
+for GBC ORCH DA review paper
 """
 
 __author__ = "Vladislav Bastrikov"
